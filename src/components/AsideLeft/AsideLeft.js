@@ -4,6 +4,8 @@ import devIcons from "../../utils/icons/icons";
 import AsideBlock from "../AsideBlock";
 import AsideBlockSocial from "../AsideBlockSocial";
 import AsideBlockTitle from "../AsideBlockTitle";
+import AsideCard from "../AsideCard";
+import AsideImg from "../AsideImg";
 import ButtonAsideLeft from "../ButtonAsideLeft";
 import ButtonBlueTrans from "../ButtonBlueTrans";
 
@@ -61,6 +63,21 @@ function AsideLeft() {
 				<ButtonAsideLeft text={"#Angular"} />
 				<ButtonAsideLeft text={"#React"} />
 			</AsideBlock>
+			<AsideCard>
+				<AsideImg
+					img="https://res.cloudinary.com/practicaldev/image/fetch/s--pVCMYZWJ--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://scontent-lga3-1.cdninstagram.com/vp/7c898e2c9e9fa71f72dd5d422d444549/5DFE1BFA/t51.2885-15/fr/e15/s1080x1080/57390242_386431405416711_440644832181536446_n.jpg%3F_nc_ht%3Dscontent-lga3-1.cdninstagram.com"
+					text="imagen card"
+				/>
+				<p className="text-lg font-medium text-indigo-500">
+					Do you have your sticker pack yet?
+				</p>
+			</AsideCard>
+			<AsideCard>
+				<p className="text-lg font-normal text-black">
+					DEV runs on 100% open source code known as <span className="text-indigo-500">Forem</span>. Contribute to the
+					codebase or host your own!
+				</p>
+			</AsideCard>
 		</aside>
 	);
 }
