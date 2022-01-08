@@ -17,10 +17,10 @@ ReactDOM.render(
 				<Route path="*" element={<h1>NOT FOUND</h1>} />
 				<Route path="/" element={<App />}>
 					<Route index element={<Home />} />
-					<Route path="create" element={<CreatePost />} />
+					<Route path="new" element={<CreatePost />} />
 					<Route path=":postID" element={<DetailPostContainer />}>
 						<Route index element={<DetailPost />} />
-						<Route path="update" element={<UpdatePost />} />
+						<Route path="edit" element={<UpdatePost />} />
 					</Route>
 				</Route>
 			</Routes>

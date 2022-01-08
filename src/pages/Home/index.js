@@ -1,4 +1,5 @@
 import React from "react";
+import Posts from "../../components/Posts/Posts";
 
 function Home() {
 	return (
@@ -6,9 +7,7 @@ function Home() {
 			<aside className="px-6 col-span-3 h-16 border hidden md:block">
 				Aside-izq
 			</aside>
-			<section className="px-6 col-span-12 h-16 border md:col-span-9 lg:col-span-6">
-				Center
-			</section>
+			<Posts/>
 			<aside className="px-6 col-span-3 h-16 border hidden lg:block">
 				Aside-der
 			</aside>
