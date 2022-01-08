@@ -12,7 +12,7 @@ function AsideRight() {
 				/>
 				<p className="text-md font-normal text-black">
 					CodeNewbie Challenge 2022 |Write More|Start Coding|Code More|Get a
-					Job|Learn in Public| → Join Cohort 1 by Jan 30th
+					Job|Learn in Public| → Join Cohort 1 by Jan 30th   
 				</p>
 			</AsideCard>
 		</aside>
