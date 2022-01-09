@@ -2,6 +2,8 @@ import React from "react";
 import AvatarUser from "../AvatarUser";
 import ButtonReactions from "../ButtonReactions";
 import ButtonTagHome from "../ButtonTagHome";
+import * as icon from "react-icons/bi";
+import ButtonSaveHome from "../ButtonSaveHome";
 
 function Card() {
   return (
@@ -16,7 +18,19 @@ function Card() {
         <ButtonTagHome>#javascript</ButtonTagHome>
         <ButtonTagHome>#css</ButtonTagHome>
       </div>
-      <ButtonReactions />
+      <div>
+        <div className="flex flex-row">
+          <ButtonReactions>
+            <icon.BiHeart size={18} />
+            Reactions
+          </ButtonReactions>
+          <ButtonReactions>
+            <icon.BiComment size={18} />
+            Comments
+          </ButtonReactions>
+          <ButtonSaveHome>Save</ButtonSaveHome>
+        </div>
+      </div>
     </div>
   );
 }

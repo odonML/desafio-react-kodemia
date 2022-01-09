@@ -1,6 +1,5 @@
 import React from "react";
 import ButtonFilterHome from "../ButtonFilterHome";
-import ButtonTagHome from "../ButtonTagHome";
 import Card from "../Card/Card";
 
 function Posts() {
@@ -13,13 +12,7 @@ function Posts() {
         <ButtonFilterHome>Latest</ButtonFilterHome>
         <ButtonFilterHome>Top</ButtonFilterHome>
       </div>
-      <div>
-        <Card titulo="" />
-        <ButtonTagHome>#react</ButtonTagHome>
-        <ButtonTagHome>#webdev</ButtonTagHome>
-        <ButtonTagHome>#javascript</ButtonTagHome>
-        <ButtonTagHome>#css</ButtonTagHome>
-      </div>
+      <Card titulo="" />
     </section>
   );
 }
