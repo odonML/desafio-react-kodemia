@@ -8,8 +8,12 @@ import InputSearch from "../InputSearch";
 
 function Navbar() {
 	return (
-		<nav className="px-6 col-span-12 h-10 border flex justify-between items-center">
+		<nav className="px-0 col-span-12 h-10 border flex justify-between items-center md:px-6 ">
 			<div className="flex items-center">
+				<ButtonBlueTrans clase="block md:hidden">
+					<icon.BiMenu size={20} />
+				</ButtonBlueTrans>
+
 				<Link to="/">
 					<img
 						className="w-8 h-7"
@@ -21,9 +25,12 @@ function Navbar() {
 			</div>
 
 			<div className="flex items-center">
-				<Link to="/new">
+				<Link to="/new" className="hidden md:block">
 					<ButtonBlueBorder>Create post</ButtonBlueBorder>
 				</Link>
+				<ButtonBlueTrans clase="block md:hidden">
+					<icon.BiSearch size={20} />
+				</ButtonBlueTrans>
 				<ButtonBlueTrans>
 					<icon.BiBell size={25} />
 				</ButtonBlueTrans>
