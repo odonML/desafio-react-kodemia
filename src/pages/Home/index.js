@@ -4,7 +4,7 @@ import AsideRight from "../../components/AsideRight/AsideRight";
 import Posts from "../../components/Posts/Posts";
 
 function Home() {
-	return (
+return (
 		<div className="col-span-12 grid grid-cols-12 bg-gray-100 xl:max-w-screen-xl">
 			<AsideLeft />
 			<Posts />
@@ -12,6 +12,7 @@ function Home() {
 			<footer className="px-6 w-full">Footer</footer>
 		</div>
 	);
+
 }
 
 export default Home;
