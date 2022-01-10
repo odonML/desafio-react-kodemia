@@ -4,6 +4,7 @@ import ButtonReactions from "../ButtonReactions";
 import ButtonTagHome from "../ButtonTagHome";
 import * as icon from "react-icons/bi";
 import ButtonSaveHome from "../ButtonSaveHome";
+import ButtonTimeHome from "../ButtonTimeHome";
 
 function Card() {
   return (
@@ -28,6 +29,7 @@ function Card() {
             <icon.BiComment size={18} />
             Comments
           </ButtonReactions>
+          <ButtonTimeHome>x min read</ButtonTimeHome>
           <ButtonSaveHome>Save</ButtonSaveHome>
         </div>
       </div>
