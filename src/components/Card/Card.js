@@ -1,34 +1,37 @@
 import React from "react";
-import AvatarUser from "../AvatarUser";
 import ButtonReactions from "../ButtonReactions";
 import ButtonTagHome from "../ButtonTagHome";
 import * as icon from "react-icons/bi";
 import ButtonSaveHome from "../ButtonSaveHome";
 import ButtonTimeHome from "../ButtonTimeHome";
+import CardUser from "../CardUser/CardUser";
+import ButtonPost from "../ButtonPost";
 
 function Card() {
   return (
-    <div className="border bg-white">
-      <AvatarUser
-        img="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
-        text=""
-      />
-      <div>
+    <div className="border bg-white px-4 py-4">
+      <CardUser />
+      <div className="flex px-9">
+        <ButtonPost>TITLE</ButtonPost>
+      </div>
+      <div className="flex px-9">
         <ButtonTagHome>#react</ButtonTagHome>
         <ButtonTagHome>#webdev</ButtonTagHome>
         <ButtonTagHome>#javascript</ButtonTagHome>
         <ButtonTagHome>#css</ButtonTagHome>
       </div>
-      <div>
+      <div className="flex justify-between px-7 py-4">
         <div className="flex flex-row">
           <ButtonReactions>
             <icon.BiHeart size={18} />
-            Reactions
+            <p className="px-2">Reactions</p>
           </ButtonReactions>
           <ButtonReactions>
             <icon.BiComment size={18} />
-            Comments
+            <p className="px-2">Comments</p>
           </ButtonReactions>
+        </div>
+        <div className="flex flex-row">
           <ButtonTimeHome>x min read</ButtonTimeHome>
           <ButtonSaveHome>Save</ButtonSaveHome>
         </div>
