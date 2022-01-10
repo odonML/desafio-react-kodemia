@@ -8,7 +8,7 @@ import ButtonTimeHome from "../ButtonTimeHome";
 
 function Card() {
   return (
-    <div>
+    <div className="border bg-white">
       <AvatarUser
         img="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
         text=""
