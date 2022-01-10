@@ -5,21 +5,18 @@ import AvatarUser from "../AvatarUser";
 import ButtonBlueBorder from "../ButtonBlueBorder";
 import ButtonBlueTrans from "../ButtonBlueTrans";
 import InputSearch from "../InputSearch";
+import LogoNav from '../LogoNav';
 
 function Navbar() {
 	return (
-		<nav className="px-0 col-span-12 h-10 border flex justify-between items-center md:px-6 ">
+		<nav className="px-3 w-full h-10 border flex justify-between items-center xl:max-w-screen-xl">
 			<div className="flex items-center">
 				<ButtonBlueTrans clase="block md:hidden">
 					<icon.BiMenu size={20} />
 				</ButtonBlueTrans>
 
 				<Link to="/">
-					<img
-						className="w-8 h-7"
-						src="https://res.cloudinary.com/practicaldev/image/fetch/s--T8ep-K_P--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/3/13d3b32a-d381-4549-b95e-ec665768ce8f.png"
-						alt="logo"
-					/>
+					<LogoNav />
 				</Link>
 				<InputSearch />
 			</div>

@@ -10,7 +10,7 @@ function InputSearch() {
 				className=" p-2 w-80 h-8 border border-gray-300 text-gray-900 rounded-md"
 				placeholder="Search..."
 			/>
-			<ButtonBlueTrans clase="absolute right-0">
+			<ButtonBlueTrans clase="absolute right-0 mt-0.5">
 				<icon.BiSearch size={20} />
 			</ButtonBlueTrans>
 		</div>
