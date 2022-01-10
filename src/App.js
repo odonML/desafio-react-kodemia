@@ -1,10 +1,10 @@
-import { Outlet } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar/Index";
+import Navbar from "./components/Navbar/Navbar";
+import { Outlet } from 'react-router-dom';
 
 function App() {
 	return (
-		<div className="grid grid-cols-12">
+		<div className="w-full flex flex-col items-center ">
 			<Navbar />
 			<Outlet />
 		</div>
