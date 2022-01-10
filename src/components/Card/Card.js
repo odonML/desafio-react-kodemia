@@ -7,13 +7,24 @@ import ButtonTimeHome from "../ButtonTimeHome";
 import CardUser from "../CardUser/CardUser";
 import ButtonPost from "../ButtonPost";
 
-function Card() {
+function Card({ activeImg = false }) {
   return (
     <div className="border rounded-md bg-white">
       <div className="w-full h-80 border">
+        {activeImg === true ? (
+          <img
+            className="h-full"
+            src="https://res.cloudinary.com/practicaldev/image/fetch/s--Fdrp4fCa--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t5vwz4xp3u61jn0q208a.png"
+            alt=""
+          />
+        ) : (
+          ""
+        )}
+        {/* {icon !== null ? <img className="w-5 h-5" src={icon} alt={text} /> : ""} */}
         <img
           className="h-full"
           src="https://res.cloudinary.com/practicaldev/image/fetch/s--Fdrp4fCa--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t5vwz4xp3u61jn0q208a.png"
+          alt=""
         />
       </div>
       <div className="bg-white p-4">
