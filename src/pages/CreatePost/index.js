@@ -1,6 +1,7 @@
 import React from "react";
 import * as ai from "react-icons/ai";
 import * as bi from "react-icons/bi";
+import * as ri from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import ButtonBlueSolid from "../../components/ButtonBlueSolid";
 import ButtonBlueTrans from "../../components/ButtonBlueTrans";
@@ -27,7 +28,68 @@ function CreatePost({ action = "create" }) {
 						<div className="w-full h-5/6 max-h-full flex flex-col items-end">
 							<div className="w-11/12 h-full rounded-lg bg-white border flex flex-col items-center justify-center">
 								<form className="w-5/6 h-5/6">
-									<h1>form</h1>
+									<input
+										className="w-36 text-gray-500 border-2 border-gray-400 font-medium rounded-lg text-sm p-2 mr-2 mb-2"
+										placeholder="Add a cover image"
+									/>
+									<input
+										type="text"
+										id="large-input"
+										className="block mb-2 py-2 w-full text-5xl font-medium text-gray-900 sm:text-md outline-none"
+										placeholder="Title Post..."
+									/>
+									<input
+										type="text"
+										id="large-input"
+										className="block mb-2 py-2 w-full text-md font-medium text-gray-900 sm:text-md outline-none"
+										placeholder="Add up to 4 tags..."
+									/>
+									<div className="w-full h-auto flex justify-between">
+										<div>
+											<ButtonBlueTrans>
+												<ai.AiOutlineBold size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<ai.AiOutlineItalic size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiLink size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiListOl size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiListUl size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiHeading size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<ri.RiDoubleQuotesL size={25} />
+											</ButtonBlueTrans>
+
+											<ButtonBlueTrans>
+												<bi.BiCode size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiCodeBlock size={25} />
+											</ButtonBlueTrans>
+											<ButtonBlueTrans>
+												<bi.BiImage size={25} />
+											</ButtonBlueTrans>
+										</div>
+										<div>
+											<ButtonBlueTrans>
+												<bi.BiDotsVerticalRounded size={25} />
+											</ButtonBlueTrans>
+										</div>
+									</div>
+									<textarea
+										id="message"
+										rows="4"
+										class="block py-2 w-full text-lg text-gray-900 outline-none"
+										placeholder="Write your post content here..."
+									></textarea>
 								</form>
 							</div>
 							{/* BOTONES */}
@@ -48,10 +110,8 @@ function CreatePost({ action = "create" }) {
 						</div>
 						{/* Form */}
 					</div>
-					<div className="w-2/6 flex items-center border border-blue-800">
-						<div className="w-full h-5/6  border border-red-500">
-							a
-						</div>
+					<div className="w-2/6 flex items-center">
+						<div className="w-full h-auto">a</div>
 					</div>
 				</div>
 			</div>
