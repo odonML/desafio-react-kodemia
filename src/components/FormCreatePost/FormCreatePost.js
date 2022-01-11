@@ -3,10 +3,10 @@ import React from "react";
 import * as ai from "react-icons/ai";
 import ButtonBlueSolid from "../../components/ButtonBlueSolid";
 import ButtonLightSolid from "../../components/ButtonLightSolid";
+import Post from "../../services/Post";
 import ButtonsFormCreatePost from "../ButtonsFormCreatePost";
 
 function FormCreatePost({ action }) {
-
 	return (
 		<Formik
 			initialValues={{
@@ -16,11 +16,23 @@ function FormCreatePost({ action }) {
 				content: "",
 				date: "",
 			}}
-			validate={(values) => {
-				let errores = {}
+			validate={(valores) => {
+				let errores = {};
+				if (!valores.img) {
+					errores.img = "Por favor ingresa el link ";
+				}
+				if (!valores.title) {
+					errores.title = "no hay titulo";
+				}
+				if (!valores.content) {
+					errores.content = "Es obligatorio agregar c";
+				}
+				return errores;
 			}}
-			onSubmit={(values) => {
-				console.log(values);
+			onSubmit={async (valores, { resetForm }) => {
+				
+				await Post.createPost(valores);
+				resetForm();
 			}}
 		>
 			{({ errors }) => (
