@@ -3,10 +3,10 @@ import React from "react";
 function DetailPost() {
   return (
     <>
-      <div className="grid lg:grid-cols-[68px_1fr_342px] md:grid-cols-[68px_1fr] gap-4 w-full lg:max-w-screen-xl md:p-4  bg-gray-200 ">
-        <aside className="bottom-0 fixed h-14 w-full p-2 rounded-t-md bg-white">
-          <div className="flex justify-around h-10">
-            <button className="flex gap-3">
+      <div className="grid gap-4 w-full lg:max-w-screen-xl md:grid-cols-[68px_1fr] md:px-4 md:py-1 bg-gray-200 lg:grid-cols-[68px_1fr_342px] ">
+        <aside className="bottom-0 fixed h-14 w-full p-2 rounded-t-md bg-white md:static md:bg-transparent md:py-6 md:h-auto">
+          <div className="flex justify-around h-10 md:flex-col md:h-auto md:gap-6">
+            <button className="flex gap-3 md:flex-col md:items-center hover:bg-red-300 hover:rounded-full">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ function DetailPost() {
               </span>
               <span>1</span>
             </button>
-            <button className="flex gap-3">
+            <button className="flex gap-3 md:flex-col md:items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ function DetailPost() {
               </span>
               <span>1</span>
             </button>
-            <button className="flex gap-3">
+            <button className="flex gap-3 md:flex-col md:items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +51,7 @@ function DetailPost() {
               </span>
               <span>1</span>
             </button>
-            <button className="flex gap-3">
+            <button className="flex gap-3 md:flex-col md:items-center">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@ function DetailPost() {
             </button>
           </div>
         </aside>
-        <main className="border border-gray-200 rounded bg-white p-5 md:px-16 md:py-8">
+        <main className="border border-gray-200 rounded-lg bg-white p-5 md:px-16 md:py-8">
           <div className="flex gap-3">
             <img
               src="https://res.cloudinary.com/practicaldev/image/fetch/s--dTz4VLy3--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/520716/dc6051bc-9129-4879-a833-f743051af755.jpeg"
@@ -84,7 +84,7 @@ function DetailPost() {
               <p className="text-gray-500 text-xs">Posted on 9 ene.</p>
             </div>
           </div>
-          <h1 className="text-3xl font-black py-4">
+          <h1 className="text-3xl font-black py-4 md:text-4xl">
             Criando Blog com React do ZERO - Iniciando no React
           </h1>
           <div>
@@ -98,7 +98,8 @@ function DetailPost() {
             </p>
           </div>
         </main>
-        <aside className="border border-pink-900 md:col-start-2 lg:col-start-3">
+        <aside className="border border-pink-900 rounded-lg md:col-start-2 lg:col-start-3 overflow-hidden">
+          <div className="w-full bg-yellow-500 h-5"></div>
           Aside2
         </aside>
       </div>
