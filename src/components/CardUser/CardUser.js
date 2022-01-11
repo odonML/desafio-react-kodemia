@@ -11,8 +11,8 @@ function CardUser() {
         text=""
       />
       <div className="flex flex-col">
-        <ButtonUserNameHome>User Name</ButtonUserNameHome>
-        <ButtonDateHome>Date Post</ButtonDateHome>
+        <ButtonUserNameHome>Auro Escalera</ButtonUserNameHome>
+        <ButtonDateHome>01/01/2022</ButtonDateHome>
       </div>
     </div>
   );
