@@ -1,40 +1,63 @@
 import React from "react";
-import AvatarUser from "../AvatarUser";
-import ButtonReactions from "../ButtonReactions";
-import ButtonTagHome from "../ButtonTagHome";
 import * as icon from "react-icons/bi";
+import ButtonDelHome from "../ButtonDelHome";
+import ButtonPost from "../ButtonPost";
+import ButtonReactions from "../ButtonReactions";
 import ButtonSaveHome from "../ButtonSaveHome";
-import ButtonTimeHome from "../ButtonTimeHome";
+import ButtonTagHome from "../ButtonTagHome";
+import CardUser from "../CardUser/CardUser";
 
-function Card() {
-  return (
-    <div className="border bg-white">
-      <AvatarUser
-        img="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
-        text=""
-      />
-      <div>
-        <ButtonTagHome>#react</ButtonTagHome>
-        <ButtonTagHome>#webdev</ButtonTagHome>
-        <ButtonTagHome>#javascript</ButtonTagHome>
-        <ButtonTagHome>#css</ButtonTagHome>
-      </div>
-      <div>
-        <div className="flex flex-row">
-          <ButtonReactions>
-            <icon.BiHeart size={18} />
-            Reactions
-          </ButtonReactions>
-          <ButtonReactions>
-            <icon.BiComment size={18} />
-            Comments
-          </ButtonReactions>
-          <ButtonTimeHome>x min read</ButtonTimeHome>
-          <ButtonSaveHome>Save</ButtonSaveHome>
-        </div>
-      </div>
-    </div>
-  );
+function Card({
+	id,
+	activeImg = false,
+	title,
+	reactions,
+	comments,
+	tags,
+	img,
+	detail = null,
+	edit = null,
+}) {
+	console.log("card id", id);
+	return (
+		<div className="border rounded-md bg-white">
+			{activeImg === true ? (
+				<div className="w-full h-80 border" onClick={detail}>
+					<img className="h-full" src={img} alt="" />
+				</div>
+			) : (
+				""
+			)}
+			{/* {img !== null ? <img className="w-5 h-5" src={icon} alt={text} /> : ""} */}
+			<div className="bg-white p-4">
+				<CardUser />
+				<div className="flex px-9" onClick={detail}>
+					<ButtonPost>{title}</ButtonPost>
+				</div>
+				<div className="flex px-9">
+					{tags.map((tag) => (
+						<ButtonTagHome>#{tag}</ButtonTagHome>
+					))}
+				</div>
+				<div className="flex justify-between px-7 py-4">
+					<div className="flex flex-row">
+						<ButtonReactions>
+							<icon.BiHeart size={18} />
+							<p className="px-2">{reactions} Reactions</p>
+						</ButtonReactions>
+						<ButtonReactions>
+							<icon.BiComment size={18} />
+							<p className="px-2">{comments} Comments</p>
+						</ButtonReactions>
+					</div>
+					<div className="flex flex-row">
+						<ButtonSaveHome click={edit}>Edit</ButtonSaveHome>
+						<ButtonDelHome>Delete</ButtonDelHome>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default Card;
