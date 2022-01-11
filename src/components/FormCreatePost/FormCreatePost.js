@@ -30,7 +30,6 @@ function FormCreatePost({ action }) {
 				return errores;
 			}}
 			onSubmit={async (valores, { resetForm }) => {
-				
 				await Post.createPost(valores);
 				resetForm();
 			}}
@@ -73,7 +72,7 @@ function FormCreatePost({ action }) {
 									as="textarea"
 									name="content"
 									rows="4"
-									class="block py-2 w-full text-lg text-gray-900 outline-none"
+									className="block py-2 w-full text-lg text-gray-900 outline-none"
 									placeholder="Write your post content here..."
 								></Field>
 							</div>

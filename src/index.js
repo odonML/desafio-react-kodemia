@@ -7,7 +7,7 @@ import "./index.css";
 import CreatePost from "./pages/CreatePost/index";
 import DetailPost from "./pages/DetailPost/index";
 import Home from "./pages/Home/index";
-import UpdatePost from "./pages/UpstePost/idenx";
+import UpdatePost from "./pages/UpstePost/index";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
