@@ -42,6 +42,7 @@ function Card({ activeImg = false, title, reactions, comments, tags, img }) {
           <div className="flex flex-row">
             <ButtonSaveHome>Edit</ButtonSaveHome>
             <ButtonDelHome>Delete</ButtonDelHome>
+            {/* <ButtonDelHome>Delete</ButtonDelHome> */}
           </div>
         </div>
       </div>
