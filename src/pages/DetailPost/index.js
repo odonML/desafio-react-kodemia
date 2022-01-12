@@ -89,22 +89,29 @@ function DetailPost() {
             </button>
           </div>
         </aside>
-        <main className="border border-gray-200 rounded-lg bg-white p-5 md:px-16 md:py-8">
-          <div className="flex gap-3">
-            <img
-              src="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
-              alt=""
-              className="rounded-full h-10 w-10"
-            />
-            <div>
-              <p className="font-semibold text-base">Aurora Escalera</p>
-              <p className="text-gray-500 text-xs">Posted on 9 ene.</p>
+        <main className="border border-gray-200 rounded-lg bg-white overflow-hidden">
+          <div className="w-full">
+            <img src={post.img} alt="imagen" />
+          </div>
+          <section className="p-5  md:px-16 md:py-8">
+            <div className="flex gap-3">
+              <img
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
+                alt=""
+                className="rounded-full h-10 w-10"
+              />
+              <div>
+                <p className="font-semibold text-base">Aurora Escalera</p>
+                <p className="text-gray-500 text-xs">Posted on 9 ene.</p>
+              </div>
             </div>
-          </div>
-          <h1 className="text-3xl font-black py-4 md:text-4xl">{post.title}</h1>
-          <div>
-            <p className="text-lg">{post.content}</p>
-          </div>
+            <h1 className="text-3xl font-black py-4 md:text-4xl">
+              {post.title}
+            </h1>
+            <div>
+              <p className="text-lg">{post.content}</p>
+            </div>
+          </section>
         </main>
         <aside className="border border-pink-900 rounded-lg md:col-start-2 lg:col-start-3 overflow-hidden">
           <div className="w-full bg-yellow-500 h-5"></div>
