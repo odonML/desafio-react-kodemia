@@ -28,7 +28,7 @@ function Card({ activeImg = false, title, reactions, comments, tags, img }) {
             <ButtonTagHome>#{tag}</ButtonTagHome>
           ))}
         </div>
-        <div className="flex justify-between px-7 py-4">
+        <div className="flex justify-between items-center px-7 py-4">
           <div className="flex flex-row">
             <ButtonReactions>
               <icon.BiHeart size={18} />
