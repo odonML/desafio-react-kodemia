@@ -7,8 +7,8 @@ const getPosts = async () => {
 
 const getPostById = async (id) => {
 	const response = await fetch(`${URL}/${id}`);
-	return response.json()
-}
+	return response.json();
+};
 
 const createPost = async (data) => {
 	const obj = {
@@ -29,8 +29,8 @@ const createPost = async (data) => {
 	return response.json();
 };
 
-
-const upDatePost = async (data, id) => {
+const updatePost = async (data, id) => {
+	console.log("service", data, id);
 	const response = await fetch(`${URL}/${id}`, {
 		method: "PATCH",
 		headers: {
@@ -45,5 +45,5 @@ export default {
 	getPosts,
 	getPostById,
 	createPost,
-	upDatePost,
+	updatePost,
 };
