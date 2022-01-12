@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import postService from "../../services/Post";
+import { useParams } from "react-router-dom";
 
 function DetailPost() {
+  const [post, setPost] = useState([]);
+  const params = useParams();
+
+  const getPost = async (id) => {
+    const response = await postService.getPostById(id);
+    setPost(response);
+    console.log(response);
+  };
+
+  useEffect(() => {
+    const id = params.postID;
+    console.log(id);
+    getPost(id);
+  }, []);
+
   return (
     <>
       <div className="grid gap-4 w-full lg:max-w-screen-xl md:grid-cols-[68px_1fr] md:px-4 md:py-1 bg-gray-200 lg:grid-cols-[68px_1fr_342px] ">
@@ -75,27 +92,18 @@ function DetailPost() {
         <main className="border border-gray-200 rounded-lg bg-white p-5 md:px-16 md:py-8">
           <div className="flex gap-3">
             <img
-              src="https://res.cloudinary.com/practicaldev/image/fetch/s--dTz4VLy3--/c_fill,f_auto,fl_progressive,h_50,q_auto,w_50/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/520716/dc6051bc-9129-4879-a833-f743051af755.jpeg"
+              src="https://res.cloudinary.com/practicaldev/image/fetch/s--huswOyCZ--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/212929/a8f974f4-40e6-48df-9b84-debd1a207e38.jpeg"
               alt=""
               className="rounded-full h-10 w-10"
             />
             <div>
-              <p className="font-semibold text-base">Tulio Calil</p>
+              <p className="font-semibold text-base">Aurora Escalera</p>
               <p className="text-gray-500 text-xs">Posted on 9 ene.</p>
             </div>
           </div>
-          <h1 className="text-3xl font-black py-4 md:text-4xl">
-            Criando Blog com React do ZERO - Iniciando no React
-          </h1>
+          <h1 className="text-3xl font-black py-4 md:text-4xl">{post.title}</h1>
           <div>
-            <p className="text-lg">
-              Que tal criar um blog com React do total zero, desde o
-              create-react-app até a listagem dos posts ? Esse vídeo foi uma
-              live que rolou no meu canal e foi super legal gravar ela por que o
-              foco foi total para quem ta iniciando agora no React! Você ta
-              iniciando ou conhece alguém ? Manda o link pra ele e vamos
-              aprender!
-            </p>
+            <p className="text-lg">{post.content}</p>
           </div>
         </main>
         <aside className="border border-pink-900 rounded-lg md:col-start-2 lg:col-start-3 overflow-hidden">
