@@ -6,7 +6,7 @@ import ButtonLightSolid from "../../components/ButtonLightSolid";
 import Post from "../../services/Post";
 import ButtonsFormCreatePost from "../ButtonsFormCreatePost";
 
-function FormCreatePost({ action }) {
+function FormCreatePost({ action = "create" }) {
 	return (
 		<Formik
 			initialValues={{
@@ -79,14 +79,12 @@ function FormCreatePost({ action }) {
 						</div>
 						{/* BOTONES */}
 						<div className="w-11/12 p-2 flex items-center">
-							{action === "create" ? (
+		
 								<div>
 									<ButtonBlueSolid type="submit">Publish</ButtonBlueSolid>
 									<ButtonLightSolid>Save draft</ButtonLightSolid>
 								</div>
-							) : (
-								<ButtonBlueSolid type="submit">Edit</ButtonBlueSolid>
-							)}
+							
 							<ButtonLightSolid>
 								<ai.AiOutlineSetting size={20} />
 							</ButtonLightSolid>
