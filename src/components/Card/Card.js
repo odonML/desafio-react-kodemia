@@ -36,13 +36,12 @@ function Card({ activeImg = false, title, reactions, comments, tags, img }) {
             </ButtonReactions>
             <ButtonReactions>
               <icon.BiComment size={18} />
-              <p className="px-2">{comments} Comments</p>
+              <p className="px-2">{comments} Comment</p>
             </ButtonReactions>
           </div>
           <div className="flex flex-row">
             <ButtonSaveHome>Edit</ButtonSaveHome>
             <ButtonDelHome>Delete</ButtonDelHome>
-            {/* <ButtonDelHome>Delete</ButtonDelHome> */}
           </div>
         </div>
       </div>
